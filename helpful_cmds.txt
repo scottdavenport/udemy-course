@@ -1,0 +1,31 @@
+Installation
+npm install @playwright/test
+npx playwright install
+
+Running Tests with options
+npx playwright test
+npx playwright test --headed
+npx playwright test --browser=firefox
+npx playwright test --browser=firefox --headed
+npx playwright test --browser=all --headed
+npx playwright test tests/example.spec.ts --browser=all --headed
+npx playwright test --grep @myTag
+npx playwright test --grep-invert @myTag
+npx playwright test --config=playwright.config.ts --project=Webkit
+
+Create and View Test Reports
+npx playwright test --config=playwright.config.ts --project=Chromium --reporter=line
+npx playwright test --config=playwright.config.ts --project=Chromium --reporter=list
+npx playwright test --config=playwright.config.ts --project=Chromium --reporter=dot
+npx playwright test --config=playwright.config.ts --project=Chromium --reporter=junit
+npx playwright test --config=playwright.config.ts --project=Chromium --reporter=html
+npx playwright show-report
+
+Run tests from scripts in package.json
+npm run tests:chrome
+npm run tests:firefox
+npm run tests:safari
+npm run tests:e2e
+
+// Use -- to override scripts
+npm run tests:safari -- --headed 
