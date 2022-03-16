@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe.only('Create Issue', () => {
   const loginUrl =
-    'https://local.japet.us:3001/login-test-automation?token=12345-098877-910'
+    'https://local.japet.us:3001/login-test-automation?'
   const logoutUrl = 'https://local.japet.us:3001/logout'
 
   test.beforeEach(async ({ page }) => {
